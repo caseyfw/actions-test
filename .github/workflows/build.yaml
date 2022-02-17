@@ -2,13 +2,21 @@ name: build
 
 on:
   workflow_call:
+    inputs:
+      fieldA:
+        required: false
+        type: string
 
 jobs:
   build:
+    name: Build things
     runs-on: ubuntu-latest
     steps:
       - name: checkout
         uses: actions/checkout@v2
+
+      - name: echo
+        uses: echo ${fieldA}
 
       - name: ls
         run: ls -al

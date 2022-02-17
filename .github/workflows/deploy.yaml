@@ -1,13 +1,15 @@
-name: build
+name: deploy
 
 on:
   workflow_call:
-    stage:
-      required: true
-      type: string
+    inputs:
+      stage:
+        required: true
+        type: string
 
 jobs:
   build:
+    name: Deploy things
     runs-on: ubuntu-latest
     steps:
       - name: checkout
