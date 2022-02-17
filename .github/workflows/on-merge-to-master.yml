@@ -15,3 +15,5 @@ jobs:
 
   deploy-to-latest:
     uses: ./.github/workflows/deploy.yaml
+    with:
+      stage: bar
