@@ -16,7 +16,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: echo
-        uses: echo ${fieldA} hello
+        run: echo ${fieldA} hello
 
       - name: ls
         run: ls -al
