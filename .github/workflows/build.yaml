@@ -9,7 +9,6 @@ on:
 
 jobs:
   build:
-    name: Build things
     runs-on: ubuntu-latest
     steps:
       - name: checkout

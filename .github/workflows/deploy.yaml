@@ -9,7 +9,6 @@ on:
 
 jobs:
   build:
-    name: Deploy things
     runs-on: ubuntu-latest
     steps:
       - name: checkout
