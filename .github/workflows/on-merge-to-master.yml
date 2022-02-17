@@ -1,0 +1,17 @@
+name: merge
+
+on:
+  push:
+    branches: ['master']
+
+jobs:
+  build-and-publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: ./.github/workflows/build.yaml
+
+      - name: ls
+        run: ls -al
+
+  deploy-to-latest:
+    uses: ./.github/workflows/deploy.yaml

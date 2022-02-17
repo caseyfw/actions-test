@@ -1,0 +1,23 @@
+name: build
+
+on:
+  workflow_call:
+    stage:
+      required: true
+      type: string
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v2
+
+      - name: ls
+        run: ls -al
+
+      - name: env
+        run: env
+
+      - name: echo
+        run: echo ${stage}
